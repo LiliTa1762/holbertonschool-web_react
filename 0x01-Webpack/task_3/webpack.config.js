@@ -20,6 +20,9 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   module: {
+    optimization: {
+      splitChunks: { chunks: "all" }
+    },
     rules: [
       {
         // add css-loader ========
