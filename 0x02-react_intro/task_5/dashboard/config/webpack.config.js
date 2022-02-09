@@ -10,13 +10,18 @@ module.exports = {
 	devServer: {
 		static: './dist',
 		hot: true,
+		open: true
 	},
+	resolve: {
+		extensions: [".js", ".jsx", ".json"]
+	},
+	devtool: "inline-source-map",
 	module: {
 		rules: [
 			{
-					use: "babel-loader",
-					test: /\.(js|jsx)$/,
-					exclude: /node_modules/
+				test: /\.(js|jsx)$/,
+				exclude: /node_modules/,
+				use: { loader: 'babel-loader' }
 			},
 			{
 					use: ["style-loader", "css-loader"],
@@ -42,8 +47,4 @@ module.exports = {
 		maxEntrypointSize: 512000,
 		maxAssetSize: 512000
 },
-resolve: {
-	extensions: [".js", ".jsx", ".json"]
-},
-devtool: "inline-source-map",
 };
