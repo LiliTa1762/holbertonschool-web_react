@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-	mode: "production",
+	mode: "development",
 	entry: './src/index.js',
 	output: {
 		filename: 'bundle.js',
@@ -9,33 +9,41 @@ module.exports = {
 	},
 	devServer: {
 		static: './dist',
-	 hot: true,
+		hot: true,
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(tsx|jsx|ts|js)?$/,
-				use: "babel-loader",
-				exclude: /node_modules/,
+					use: "babel-loader",
+					test: /\.(js|jsx)$/,
+					exclude: /node_modules/
 			},
 			{
-				test: /\.(png|jpg|gif)$/i,
-				use: [
-					'file-loader',
-					{
-						loader: 'image-webpack-loader',
-					},
-				],
+					use: ["style-loader", "css-loader"],
+					test: /\.css$/i
 			},
-			{ 
-				test: /\.css$/, 
-				use: ["style-loader", "css-loader"] 
+			{
+					test: /\.(gif|png|jpe?g|svg)$/i,
+					use: [
+							"file-loader",
+							{
+									loader: "image-webpack-loader",
+									options: {
+											bypassOnDebug: true, // webpack@1.x
+											disable: true, // webpack@2.x and newer
+									},
+							},
+					],
 			},
-		]
-	},
+	],
+},
 	performance: {
 		hints: false,
 		maxEntrypointSize: 512000,
 		maxAssetSize: 512000
 },
+resolve: {
+	extensions: [".js", ".jsx", ".json"]
+},
+devtool: "inline-source-map",
 };
