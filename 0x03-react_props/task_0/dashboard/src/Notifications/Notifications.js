@@ -1,9 +1,9 @@
 import React from "react";
 import { getLatestNotification } from "../utils/utils";
 import "./Notifications.css";
-import close_icon from "../close_icon.png";
+import close_icon from "../assets/close_icon.png";
 
-export default function Notifications() {
+function Notifications() {
 	return (
 		<div className="Notifications">
 			<button style={{display: "inline-block",
@@ -26,3 +26,4 @@ export default function Notifications() {
 		</div>
 	)
 }
+export default Notifications;

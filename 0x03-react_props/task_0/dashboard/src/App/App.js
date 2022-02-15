@@ -1,4 +1,5 @@
 import React from "react";
+import Notifications from '../Notifications/Notifications';
 import Header from '../Header/Header';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';
@@ -6,18 +7,17 @@ import Footer from '../Footer/Footer';
 function App() {
 	return (
 		<>
-		<Notifications></Notifications>
+		<Notifications />
 			<div>
-				<Header></Header>
+				<Header />
 			</div>
 			<div>
-				<Login></Login>
+				<Login />
 			</div>
 			<div>
-				<Footer></Footer>
+				<Footer />
 			</div>
 		</>
 	);
 }
-
 export default App;
