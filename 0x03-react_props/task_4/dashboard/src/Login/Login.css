@@ -1,0 +1,18 @@
+.App-body {
+  margin-top: 50px;
+  padding-left: 2rem;
+  border-bottom: 5px #e01d3f solid;
+  padding-bottom: 300px;
+}
+
+.App-body label {
+  margin-right: 0.5rem;
+}
+
+.App-body input {
+  margin-right: 0.5rem;
+}
+
+.App-body button {
+  margin-left: 0.5rem;
+}

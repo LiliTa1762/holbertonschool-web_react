@@ -1,0 +1,33 @@
+.Notifications {
+	float: right;
+	border: 3px dashed #e01d3f;
+	padding: 10px;
+}
+
+.menuItem {
+	text-align: right;
+}
+
+.Notifications button img {
+	width: 10px;
+	padding-top: 3rem;
+}
+
+.Notifications p {
+	margin: 0;
+	margin-top: 15px;
+}
+
+.Notifications ul {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+}
+
+li[data-notification-type="default"] {
+	color: blue;
+}
+
+li[data-notification-type="urgent"] {
+	color: red;
+}
