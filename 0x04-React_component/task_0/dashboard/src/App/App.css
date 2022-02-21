@@ -1,0 +1,46 @@
+.App {
+  background-color: white;
+  }
+
+  .App-header {
+    background-color: white;
+    color: white;
+    border-bottom: 3px solid #e01d3f;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .App-header h1 {
+    color: #e01d3f;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .App-body {
+    height: 40rem;
+    border-bottom: 3px solid #e01d3f;
+    margin-top: 50px;
+  }
+
+  .App-body p {
+    margin-left: 50px;
+  }
+
+  .App-body label {
+    margin: 0 0.5rem;
+  }
+
+  .App-body button {
+    margin-left: 0.5rem;
+  }
+
+  .App-footer {
+    text-align: center;
+    font-style: italic;
+  }
