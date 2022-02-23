@@ -1,0 +1,17 @@
+.App-body {
+	height: 40rem;
+	border-bottom: 3px solid #e01d3f;
+	margin-top: 50px;
+}
+
+.App-body p {
+	margin-left: 50px;
+}
+
+.App-body label {
+	margin: 0 0.5rem;
+}
+
+.App-body button {
+	margin-left: 0.5rem;
+}
