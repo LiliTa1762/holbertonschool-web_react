@@ -2,7 +2,8 @@ import { fromJS } from 'immutable';
 
 // Take in Object and returns Immutable object
 function getImmutableObject(object) {
-	return fromJS(object);
+	let variableConvert = fromJS(object);
+	return variableConvert;
 };
 
 export default getImmutableObject;
