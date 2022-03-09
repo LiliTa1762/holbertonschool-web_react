@@ -1,9 +1,11 @@
 import { fromJS } from 'immutable';
 
 // Take in Object and returns Immutable object
-export default function getImmutableObject(object) {
+function getImmutableObject(object) {
 	return fromJS(object);
 };
+
+export default getImmutableObject;
 
 const object = {
 	fear: true,
