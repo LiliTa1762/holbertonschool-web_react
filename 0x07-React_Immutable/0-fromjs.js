@@ -5,7 +5,6 @@ function getImmutableObject(object) {
 	let variableConvert = fromJS(object);
 	return variableConvert;
 };
-
 export default getImmutableObject;
 
 const object = {
