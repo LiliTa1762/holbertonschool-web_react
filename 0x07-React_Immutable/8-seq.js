@@ -1,9 +1,16 @@
-import { Seq } from "immutable";
+import { Seq } from 'immutable';
 
-export default function printBestStudents(object) {
-	return Seq(object)
-	.filter(student => student.score >= 70)
-	.map()
+export default function printBestStudents(obj) {
+	const seq = Seq(obj)
+	.filter((student) => student.score >= 70)
+	.map((obj) => {
+		const student = obj;
+		student.firstName = student.firstName[0].toUpperCase() + student.firstName.slice(1);
+		student.lastName = student.lastName[0].toUpperCase() + student.lastName.slice(1);
+		return student;
+	}).toObject();
+
+	console.log(seq);
 }
 
 // Calling the function should filter any student
